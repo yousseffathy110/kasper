@@ -1,4 +1,4 @@
-/* end global rules  */
+/* start global rules  */
 *,
 *::after,
 *::before {
@@ -11,14 +11,22 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: black;
 }
 ul {
   list-style-type: none;
 }
-a {
+a:not(.logo) {
   text-decoration: none;
+  color: white;
+  opacity: 0.6;
 }
 /* end global rules  */
+/* start design variables */
+:root {
+  --main-color: #00c7fc;
+}
+/* end design variables */
 /* small screens */
 @media (min-width: 768px) {
   .container {
@@ -42,9 +50,94 @@ a {
   width: 12px; /* Set the width of the scrollbar */
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #0f748f; /* Set the color of the scrollbar thumb */
+  background-color: var(
+    --main-color
+  ); /* Set the color of the scrollbar thumb */
 }
-.container{
-    padding: 0 15px;
-    margin: 0 auto;
+header {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+header .container {
+  padding: 5px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  min-height: 85.33px;
+}
+header .container::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: 0;
+  left: 15px;
+  width: calc(100% - 30px);
+  background-color: #817e7e;
+  z-index: -1;
+}
+i {
+  color: white;
+  cursor: pointer;
+}
+i:not(.search) {
+  font-size: 1.8rem;
+}
+.logo img {
+  height: 70px;
+}
+@media (min-width: 767px) {
+  header nav .menu {
+    display: none;
+  }
+}
+header ul,
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  header ul {
+    display: none;
+  }
+  header nav .menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0 0 0 / 0.5);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+  }
+  header nav .menu:hover + ul li a {
+    padding: 5px;
+  }
+}
+header .form {
+  border-left: 1px solid #817e7e;
+  padding-left: 25px;
+}
+header li a {
+  padding: 29px 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+header li a:hover,
+header li a.active {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
 }
