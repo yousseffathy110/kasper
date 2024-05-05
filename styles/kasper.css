@@ -275,14 +275,17 @@ main .landing {
 }
 /* end landing  */
 /* start special heading */
+.services {
+  padding: 0 0 100px 0;
+}
 .main-heading {
   text-align: center;
-  padding: 100px;
+  padding: 100px 0 0 0;
   text-transform: capitalize;
 }
 .main-heading h2 {
   font-weight: normal;
-  font-size: 40px;
+  font-size: 45px;
   margin-bottom: 70px;
   position: relative;
 }
@@ -325,3 +328,44 @@ main .landing {
   color: #777;
 }
 /* finish special heading */
+/* start services */
+.services .srv-box {
+  display: flex;
+}
+.services i {
+  color: black;
+  font-size: 3em;
+  margin-right: 50px;
+}
+@media (min-width: 768px) {
+  .services .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+    /* or you can use this below instead of the two above */
+    /* gap: 60px 40px; */
+  }
+}
+@media (max-width: 767px) {
+  .services .srv-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .services .srv-box i {
+    margin: 0 0 30px;
+  }
+}
+.services .services-container h3 {
+  color: var(--main-color);
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+.services .services-container p {
+  line-height: 2;
+  color: #777;
+}
+/* end services */
