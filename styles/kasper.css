@@ -377,11 +377,6 @@ main .landing {
   padding: var(--section-padding) 0;
   height: 600px;
   position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  justify-content: space-between;
-  color: white;
 }
 .design::before {
   content: "";
@@ -399,6 +394,7 @@ main .landing {
   height: 462px;
 }
 .design .text {
+  color: white;
   position: absolute;
   top: 50%;
   right: 0;
@@ -423,6 +419,14 @@ main .landing {
 }
 .design .text ul li {
   font-size: 1.4rem;
+}
+.design .text ul li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f390";
+  margin-right: 16px;
+  position: relative;
+  top: 2px;
 }
 @media (max-width: 867px) {
   .design img {
