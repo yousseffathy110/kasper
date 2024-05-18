@@ -601,5 +601,20 @@ main .landing {
 .about {
   padding-top: 50px;
   text-align: center;
+  overflow: hidden;
+}
+.about img {
+  position: relative;
+  bottom: -120px;
+  margin-top: -120px;
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .about img {
+    bottom: -60px;
+    margin-top: -60px;
+  }
 }
 /* end about section */
+/* start the Statistics section*/
+/* end the Statistics section*/
