@@ -597,3 +597,9 @@ main .landing {
   cursor: pointer;
 }
 /* End Video */
+/* start about section */
+.about {
+  padding-top: 50px;
+  text-align: center;
+}
+/* end about section */
