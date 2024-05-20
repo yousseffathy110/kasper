@@ -857,3 +857,117 @@ main .landing {
   margin-top: 20px;
 }
 /* end quote  */
+/* start the pricing section  */
+.pricing .container .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  column-gap: 20px;
+}
+.pricing .container .plans .plan {
+  text-align: center;
+}
+.pricing .container .plans .plan .box {
+  padding: 40px 20px;
+  border: 1px solid;
+  border-color: var(--main-color) transparent var(--main-color) transparent;
+}
+.pricing .container .plans .plan h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.pricing .container .plans .plan span {
+  font-size: 60px;
+  font-weight: bold;
+  position: relative;
+}
+.pricing .container .plans .plan span::before {
+  content: "$";
+  position: absolute;
+  top: -11px;
+  left: -18px;
+  font-size: 30px;
+}
+.pricing .container .plans .plan span::after {
+  content: "/MO";
+  position: absolute;
+  font-size: 20px;
+  bottom: 10px;
+  right: -60px;
+}
+.pricing .container .plans .plan ul {
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .container .plans .plan ul li {
+  color: black;
+  padding: 20px;
+  position: relative;
+}
+.pricing .container .plans .plan ul li:not(:last-child)::after {
+  content: "";
+  width: 140px;
+  height: 1px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.pricing .container .plans .plan button {
+  margin: 50px 0;
+  font-size: 1.1rem;
+  padding: 20px;
+  border: 1px solid var(--main-color);
+  background-color: white;
+  text-transform: capitalize;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  cursor: pointer;
+}
+.pricing .container .plans .plan button:hover {
+  transform: rotate(360deg) scale(1.1);
+  -webkit-transform: rotate(360deg) scale(1.1);
+  -moz-transform: rotate(360deg) scale(1.1);
+  -ms-transform: rotate(360deg) scale(1.1);
+  -o-transform: rotate(360deg) scale(1.1);
+}
+.pricing .container .text-center {
+  text-align: center;
+  margin: 50px auto 20px;
+  font-size: 20px;
+}
+.pricing .container .con-btn {
+  width: 160px;
+  margin: 20px auto;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.4px;
+}
+.pricing .container .con-btn:hover{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+/* end the pricing section  */
