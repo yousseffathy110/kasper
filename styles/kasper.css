@@ -1136,7 +1136,7 @@ main .landing {
     order: 2;
   }
 }
-.foot {
+footer {
   padding-top: calc(var(--section-padding) / 2);
   padding-bottom: calc(var(--section-padding) / 2);
   background-image: url(../assets/subscribe.jpg);
@@ -1145,7 +1145,7 @@ main .landing {
   color: white;
   text-align: center;
 }
-.foot::before {
+footer::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1154,13 +1154,13 @@ main .landing {
   height: 100%;
   background-color: rgb(0 0 0 / 70%);
 }
-.foot .container {
+footer .container {
   position: relative;
 }
-.foot .container img {
+footer .container img {
   margin-bottom: 50px;
 }
-.foot .container p:nth-of-type(1) {
+footer .container p:nth-of-type(1) {
   text-transform: uppercase;
   padding: 20px;
   border-bottom: 1px solid white;
@@ -1168,20 +1168,20 @@ main .landing {
   width: fit-content;
   margin: 10px auto;
 }
-.foot .container .social-links {
+footer .container .social-links {
   margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 35px;
 }
-.foot .container .social-links i {
+footer .container .social-links i {
   font-size: 16px;
 }
-.foot .container p:nth-of-type(2) {
+footer .container p:nth-of-type(2) {
   margin-top: 60px;
 }
-.foot .container p:nth-of-type(2) span {
+footer .container p:nth-of-type(2) span {
   color: var(--main-color);
 }
 /* end the contact section  */
